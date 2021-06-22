@@ -1,0 +1,93 @@
+<html>
+    
+    <script>
+          function call()
+          {
+          if(frm.fNM.value==0)
+          alert("Full Name is required");
+          if(frm.uid.value==0)
+          alert("id is required");
+          if(frm.pass.value==0)
+}
+
+function linux(){
+	var i=document.getElementById("x").value
+	var xhr=new XMLHttpRequest()
+	//xhr.onload()
+        xhr.open("GET","http://192.168.43.210/cgi-bin/cmd.py?x=data, true)
+	xhr.send()
+	xhr.onload=function(){
+		var output=xhr.responseText;
+		document.getElementById("d1").innerHTML=output
+	}
+
+</script>
+
+
+
+    <style>
+        .back{
+        font-size:70px;
+        font-family:sans-serif;
+        color:red;
+        font-weight:bold;
+        }
+        .mytheme{
+            width:10%;
+            height:40px;
+            background-color:skyblue;
+            color:white;
+            font-family:sans-serif;
+            font-size:bold;
+            font-size:20px;
+            border-radius:330px;
+        }
+        
+        .mytheme:hover{
+            background-color:red;
+            color:white;
+        }
+        </style>
+    <body background="docker2.jpg">
+       <table width="100%" style="background-color:white;border-radius:30px;opacity:0.7">
+           <tr align="center">
+           <tr><td><img src="dokcer1.gif" width="300px" height="150"></td>
+               <td class="back">Run Docker Commands</td>
+           </tr>
+       </table>
+        <table width="100%" width="40px" height="50px" style="background-color:grey;border-radius:440px">
+            <tr align="center">
+          
+            </tr>
+        </table>
+        
+
+         <form name="frm" action = "js.py" onSubmit="return call()" method="post">
+         <table align="center" width="70%" cellspacing="10" cellpading="1" style="background-color:lightblue;border-radius:30px;opacity:0.8;width:20%;height:25%" border="0">
+                            
+        <tr align="center">
+            <td style="font-size:40px">Docker Commands</td>
+        </tr>
+                                         
+        <tr align="center">
+            <td style="font-size:20px">Enter Your Comamnd</td>
+        <tr align="center">
+	    
+
+        </tr>
+        <tr align="center">
+            <td><input type="text" name="fNM" placeholder="Enter Commands Here" style="width:50%;height:40px;border-radius:30px;background-color:orange"></td>
+            </tr>
+           <button id="submit" onclick="linux()">Display</button>
+            </tr>
+        <tr align="center"> 
+            <td><input type="submit" onclick="linux() value="Sign Up" style="width:30%;height:40px;border-radius:30px;background-color:orange"></td> 
+            </tr>
+
+<div id="output">
+</div>
+     
+              </table>
+          </form>
+     </body>
+</html>
