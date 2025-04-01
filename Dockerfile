@@ -5,3 +5,4 @@ COPY index.html /var/www/html/
 COPY test.py /
 EXPOSE 80
 CMD /usr/sbin/httpd -DFOREGROUND
+  
